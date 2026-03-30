@@ -1,13 +1,11 @@
+package org.example;
+
 public class HelloApp {
     public static void main(String[] args) {
 
-        // Check if a name is passed
-        if (args.length > 0) {
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
-        } else {
-            // Default output
-            System.out.println("Hello, World!");
-        }
+        // If argument exists → use it, else use "World"
+        String name = (args.length > 0) ? args[0] : "World";
+
+        System.out.println("Hello, " + name + "!");
     }
 }
