@@ -3,9 +3,15 @@ package org.example;
 public class HelloApp {
     public static void main(String[] args) {
 
-        // If argument exists → use it, else use "World"
-        String name = (args.length > 0) ? args[0] : "World";
+        String names;
 
-        System.out.println("Hello, " + name + "!");
+        if (args.length > 0) {
+            // Join all names with comma
+            names = String.join(", ", args);
+        } else {
+            names = "World";
+        }
+
+        System.out.println("Hello, " + names + "!");
     }
 }
